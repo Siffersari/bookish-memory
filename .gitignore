@@ -1,0 +1,8 @@
+################################################
+node_modules/
+dist/
+coverage/
+
+# Coverage directory used by tools like istanbul
+coverage
+.coveralls.yml
