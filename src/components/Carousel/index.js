@@ -7,12 +7,14 @@ export class Carousel extends Component {
   render() {
     const images = [
       {
-        original: 'https://picsum.photos/id/1018/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1018/250/150/',
+        original: laptop,
+        thumbnail: laptop,
+        originalClass: 'main-carousel',
       },
       {
         original: 'https://picsum.photos/id/1015/1000/600/',
         thumbnail: 'https://picsum.photos/id/1015/250/150/',
+        originalClass: 'carousel',
       },
       {
         original: 'https://picsum.photos/id/1019/1000/600/',
@@ -20,7 +22,7 @@ export class Carousel extends Component {
       },
     ];
 
-    return <ImageGallery items={images} />;
+    return <ImageGallery items={images} useBrowserFullscreen={false} />;
   }
 }
 
