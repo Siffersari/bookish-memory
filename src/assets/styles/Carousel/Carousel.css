@@ -1,1 +1,39 @@
-@import '~react-image-gallery/styles/css/image-gallery.css';
+.product-image {
+  height: 30em;
+  /* width: 50%; */
+}
+
+.product-image img {
+  height: 28em;
+}
+
+/* .carousel-slider {
+  width: 50% !important;
+} */
+
+.gallery-container {
+  display: table;
+  width: 100%;
+}
+
+.gallery-row {
+  display: table-row;
+}
+
+.gallery-pic {
+  display: table-cell;
+  width: 33%;
+  /* background: #f6f6f6; */
+  /* border-right: 1px solid black; */
+}
+
+.gallery-pricing {
+  display: table-cell;
+  background: #f6f6f6;
+  width: 33%;
+  color: black;
+}
+
+.gallery-pricing:first-child {
+  margin-top: 10em !important;
+}
