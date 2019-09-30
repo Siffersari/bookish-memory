@@ -10,13 +10,11 @@ export class Home extends Component {
       <div className="container">
         <Header></Header>
         <div className="gallery-container">
-          <div className="gallery-row">
-            <div className="gallery-pic">
-              <Carousel></Carousel>
-            </div>
-            <div className="gallery-pricing">
-              <Cart></Cart>
-            </div>
+          <div className="column">
+            <Carousel></Carousel>
+          </div>
+          <div className="column">
+            <Cart></Cart>
           </div>
         </div>
         <Description></Description>
