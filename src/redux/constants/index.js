@@ -1,0 +1,1 @@
+export const FETCH_CLICKED_ITEM = 'FETCH_CLICKED_ITEM';

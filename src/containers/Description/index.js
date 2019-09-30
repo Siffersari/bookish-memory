@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../../assets/styles/Description/Description.css';
 
 export class Description extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+    };
+  }
+
   render() {
+    const {
+      carousel: { item, isLoading },
+    } = this.props;
+
+    console.log('state', item);
+
     return (
       <div className="wrapper">
         <div className="product-info">
           <div className="product-text">
-            <h1>Harvest Vase</h1>
+            <h1>{item.name}</h1>
             <h2>by studio and friends</h2>
             <p>
-              Harvest Vases are a reinterpretation of peeled fruits and
-              vegetables as functional objects. The surfaces appear to be sliced
-              and pulled aside, allowing room for growth.{' '}
+              {item.description}
             </p>
           </div>
           <div className="product-price-btn">
@@ -27,4 +40,11 @@ export class Description extends Component {
   }
 }
 
-export default Description;
+const mapStateToProps = ({ carousel }) => ({
+  carousel,
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(Description);
