@@ -3,12 +3,11 @@
 .selector {
   position: absolute;
   left: 10%;
-  top: 50%;
+  top: 60%;
   width: 2em;
   height: 2em;
-  margin-top: -45px;
+  margin-top: -55px;
   margin-left: -80px;
-  display: flex;
 }
 
 .selector,
@@ -103,4 +102,26 @@
   margin-left: -40px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
+}
+
+.pricing--bounce {
+  animation: bounce 0.5s 2 alternate;
+  -webkit-animation: bounce 0.5s 2 alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }

@@ -113,10 +113,6 @@ export class Description extends Component {
               selectedCurrency={selectedCurrency}
               currency={currency}
             ></Select>
-
-            <button className="p-price-btn" type="button">
-              add to cart
-            </button>
           </div>
         </div>
       </div>
