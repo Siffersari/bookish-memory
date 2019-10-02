@@ -15,11 +15,16 @@ export class Select extends Component {
     $('.selector li input').click(function(e) {
       const currency = $("input[name='currency']:checked").val();
 
+      const s = $('.selector button');
+
+      toggleOptions(s.parent());
+
       fetchCurrency(currency);
     });
   }
 
   render() {
+    const { price, firstItem, selectedCurrency, currency } = this.props;
     return (
       <div className="selector">
         <ul>
@@ -41,6 +46,19 @@ export class Select extends Component {
           </li>
         </ul>
         <button> &#36; </button>
+
+        <span className="price-span">
+          {(
+            (price && price[0].price) ||
+            firstItem.prices[3].price
+          ).toLocaleString(
+            `en-${(selectedCurrency && selectedCurrency.slice(0, 2)) || 'US'}`,
+            {
+              style: 'currency',
+              currency: currency,
+            }
+          )}
+        </span>
       </div>
     );
   }

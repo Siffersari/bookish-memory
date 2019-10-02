@@ -107,20 +107,12 @@ export class Description extends Component {
             </AnimateOnChange>
           </div>
           <div className="product-price-btn">
-            <Select></Select>
-            <span className="price-span">
-              {(
-                (price && price[0].price) ||
-                firstItem.prices[3].price
-              ).toLocaleString(
-                `en-${(selectedCurrency && selectedCurrency.slice(0, 2)) ||
-                  'US'}`,
-                {
-                  style: 'currency',
-                  currency: currency,
-                }
-              )}
-            </span>
+            <Select
+              price={price}
+              firstItem={firstItem}
+              selectedCurrency={selectedCurrency}
+              currency={currency}
+            ></Select>
 
             <button className="p-price-btn" type="button">
               add to cart

@@ -7,7 +7,7 @@
 } */
 
 .wrapper {
-  height: 420px;
+  min-height: 470px;
   margin: 0 auto;
   border-radius: 7px 7px 7px 7px;
   /* VIA CSS MATIC https://goo.gl/cIbnS */
@@ -116,7 +116,7 @@ span {
   display: inline-block;
   height: 50px;
   font-family: 'Suranna', serif;
-  font-size: 34px;
+  font-size: 30px;
 }
 
 .price-span {
