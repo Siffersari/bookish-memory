@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import styled, { keyframes } from 'styled-components';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import AnimateOnChange from 'react-animate-on-change';
-import { bounce } from 'react-animations';
 import Rater from 'react-rater';
 import Select from '../../components/CircularSelect';
 import '../../assets/styles/Description/Description.css';
 import 'react-rater/lib/react-rater.css';
 import { data } from '../../datastore';
 import { filterItem } from '../../utils/app';
-// import { handleSelect } from '../../assets/js/selector';
-// require('../../assets/js/selectFx');
-// require('../../assets/js/classie');
-
-const Bounce = styled.div`
-  animation: 2s ${keyframes`${bounce}`} 2;
-`;
 
 export class Description extends Component {
   constructor(props) {
@@ -29,10 +19,6 @@ export class Description extends Component {
       currency: 'USD',
     };
   }
-
-  // componentDidMount() {
-  //   handleSelect();
-  // }
 
   componentWillReceiveProps(newProps) {
     this.setState({
