@@ -8,42 +8,30 @@ export class Select extends Component {
     $('.selector button').click(function(e) {
       toggleOptions($(this).parent());
     });
+    $('.selector li input').click(function(e) {
+      const code = $("input[name='currency']:checked").val();
+    });
   }
+
   render() {
     return (
       <div className="selector">
         <ul>
           <li>
-            <input id="1" type="checkbox" />
-            <label for="1">Option 1</label>
+            <input id="1" type="radio" name="currency" value="US" />
+            <label for="1">USD</label>
           </li>
           <li>
-            <input id="2" type="checkbox" />
-            <label for="2">Option 2</label>
+            <input id="2" type="radio" name="currency" value="NG" />
+            <label for="2">NGN</label>
           </li>
           <li>
-            <input id="3" type="checkbox" />
-            <label for="3">Option 3</label>
+            <input id="3" type="radio" name="currency" value="KE" />
+            <label for="3">KSH</label>
           </li>
           <li>
-            <input id="4" type="checkbox" />
-            <label for="4">Option 4</label>
-          </li>
-          <li>
-            <input id="5" type="checkbox" />
-            <label for="5">Option 5</label>
-          </li>
-          <li>
-            <input id="6" type="checkbox" />
-            <label for="6">Option 6</label>
-          </li>
-          <li>
-            <input id="7" type="checkbox" />
-            <label for="7">Option 7</label>
-          </li>
-          <li>
-            <input id="8" type="checkbox" />
-            <label for="8">Option 8</label>
+            <input id="4" type="radio" name="currency" value="EU" />
+            <label for="4">EUR</label>
           </li>
         </ul>
         <button> &#36; </button>

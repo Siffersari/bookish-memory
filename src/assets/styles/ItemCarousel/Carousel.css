@@ -27,3 +27,7 @@
 .carousel-container {
   margin: 5em 0.5em 0 0.5em;
 }
+
+.carousel-container div {
+  overflow-x: hidden !important;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../../components/Header';
 import Description from '../Description';
 import ItemCarousel from '../../components/ItemCarousel';

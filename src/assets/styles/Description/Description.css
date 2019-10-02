@@ -26,6 +26,28 @@
   border-radius: 7px 0 0 7px;
 } */
 
+.message-clicked {
+  animation: clicked-keyframes 1s;
+}
+
+@keyframes clicked-keyframes {
+  from {
+    opacity: 0.01;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
 .product-info {
   float: left;
   height: 420px;
@@ -74,7 +96,7 @@
 }
 
 .product-price-btn {
-  height: 103px;
+  height: 90px;
   margin-top: 17px;
   position: relative;
 }
