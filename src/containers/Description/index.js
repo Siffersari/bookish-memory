@@ -26,7 +26,7 @@ export class Description extends Component {
       item: data.products[3],
       rating: 4,
       isChanged: false,
-      code: 'US',
+      currency: 'USD',
     };
   }
 
@@ -42,17 +42,24 @@ export class Description extends Component {
       carousel: {
         item: { name },
       },
+      select: { currency },
     } = newProps;
 
     const {
       carousel: {
         item: { name: prevItem },
       },
+      select: { currency: prevCurrency },
     } = this.props;
 
     name !== prevItem &&
       this.setState({
         isChanged: true,
+      });
+
+    currency !== prevCurrency &&
+      this.setState({
+        currency,
       });
   }
 
@@ -66,13 +73,21 @@ export class Description extends Component {
   render() {
     const {
       carousel: { item },
+      select: { currency },
     } = this.props;
 
-    const { item: firstItem, isChanged } = this.state;
+    const {
+      item: firstItem,
+      isChanged,
+      currency: selectedCurrency,
+    } = this.state;
 
-    // console.log('state', item);
-
-    console.log('item.rating', item.rating);
+    const price = filterItem(
+      item.prices || firstItem.prices,
+      'currency',
+      currency
+    );
+    console.log(selectedCurrency);
 
     return (
       <div className="wrapper">
@@ -93,9 +108,18 @@ export class Description extends Component {
           </div>
           <div className="product-price-btn">
             <Select></Select>
-            <span>
-              {(item.prices && item.prices[3].price) ||
-                firstItem.prices[3].price}
+            <span className="price-span">
+              {(
+                (price && price[0].price) ||
+                firstItem.prices[3].price
+              ).toLocaleString(
+                `en-${(selectedCurrency && selectedCurrency.slice(0, 2)) ||
+                  'US'}`,
+                {
+                  style: 'currency',
+                  currency: currency,
+                }
+              )}
             </span>
 
             <button className="p-price-btn" type="button">
@@ -108,20 +132,12 @@ export class Description extends Component {
   }
 }
 
-const mapStateToProps = ({ carousel }) => ({
+const mapStateToProps = ({ carousel, select }) => ({
   carousel,
+  select,
 });
 
 export default connect(
   mapStateToProps,
   null
 )(Description);
-
-// .toLocaleString(
-//   (country.length > 0 && `en-${country[0].code}`) || 'en-US',
-//   {
-//     style: 'currency',
-//     currency:
-//       (country.length > 0 && country[0].currency) || 'USD',
-//   }
-// )

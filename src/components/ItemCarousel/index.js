@@ -37,12 +37,13 @@ export class ItemGallery extends Component {
       <div className="carousel-container">
         <Whirligig
           visibleSlides={3}
-          gutter="9em"
+          gutter="10em"
           ref={_whirligigInstance => {
             whirligig = _whirligigInstance;
           }}
         >
           <img
+            className="prime-img"
             src={shirt}
             name="Shirt"
             onClick={e =>
@@ -50,6 +51,7 @@ export class ItemGallery extends Component {
             }
           />
           <img
+            className="prime-img"
             src={pants}
             name="Pants"
             onClick={e =>
@@ -57,6 +59,7 @@ export class ItemGallery extends Component {
             }
           />
           <img
+            className="prime-img"
             src={shoes}
             name="Shoes"
             onClick={e =>
@@ -64,6 +67,7 @@ export class ItemGallery extends Component {
             }
           />
           <img
+            className="prime-img"
             src={cellphone}
             name="Cellphone"
             onClick={e =>
@@ -71,6 +75,7 @@ export class ItemGallery extends Component {
             }
           />
           <img
+            className="prime-img"
             src={laptop}
             name="Laptop"
             onClick={e =>
@@ -78,10 +83,10 @@ export class ItemGallery extends Component {
             }
           />
         </Whirligig>
-        <button onClick={prev} className="carousel-btn">
+        <button onClick={prev} className="carousel-btn btn-small">
           Prev
         </button>
-        <button onClick={next} className="carousel-btn carousel-next">
+        <button onClick={next} className="carousel-btn carousel-next btn-small">
           Next
         </button>
       </div>

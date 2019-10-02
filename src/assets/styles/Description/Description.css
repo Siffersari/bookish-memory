@@ -119,6 +119,10 @@ span {
   font-size: 34px;
 }
 
+.price-span {
+  letter-spacing: 0.2em;
+}
+
 .p-price-btn {
   float: right;
   display: inline-block;

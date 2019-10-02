@@ -56,7 +56,9 @@ a:focus {
 /* Header */
 
 .title-header {
-  position: relative;
+  position: fixed;
+  background-color: #ffffff;
+  min-height: 3.6em;
   z-index: 100;
   display: -webkit-flex;
   display: flex;
@@ -65,6 +67,9 @@ a:focus {
   justify-content: space-between;
   width: 100%;
   padding: 1em;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -13px;
 }
 
 .title-header h1 {

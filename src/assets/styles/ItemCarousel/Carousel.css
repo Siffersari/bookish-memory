@@ -25,9 +25,21 @@
 }
 
 .carousel-container {
-  margin: 5em 0.5em 0 0.5em;
+  margin: 7.5em 0.5em 5em 0.5em;
+  cursor: pointer;
 }
 
 .carousel-container div {
   overflow-x: hidden !important;
+}
+
+.prime-img {
+  margin-left: 5em;
+}
+
+.btn-small {
+  width: 5em !important;
+  border-radius: 0 !important;
+  position: absolute;
+  top: 14em;
 }
