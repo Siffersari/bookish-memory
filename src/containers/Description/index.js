@@ -21,39 +21,18 @@ export class Description extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState({
-      isChanged: false,
-    });
     const {
-      carousel: {
-        item: { name },
-      },
       select: { currency },
     } = newProps;
 
     const {
-      carousel: {
-        item: { name: prevItem },
-      },
       select: { currency: prevCurrency },
     } = this.props;
-
-    name !== prevItem &&
-      this.setState({
-        isChanged: true,
-      });
 
     currency !== prevCurrency &&
       this.setState({
         currency,
       });
-  }
-
-  onCurrencyChange(currency) {
-    const code = currency.slice(0, 2);
-    this.setState({
-      code: code,
-    });
   }
 
   render() {
@@ -62,11 +41,7 @@ export class Description extends Component {
       select: { currency },
     } = this.props;
 
-    const {
-      item: firstItem,
-      isChanged,
-      currency: selectedCurrency,
-    } = this.state;
+    const { item: firstItem, currency: selectedCurrency } = this.state;
 
     const price = filterItem(
       item.prices || firstItem.prices,

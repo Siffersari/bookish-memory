@@ -2,10 +2,16 @@
   "name": "amazing",
   "version": "1.0.0",
   "description": "Amazing is an international e-commerce store",
+  "engines": {
+    "node": "12.6.0"
+  },
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "start:dev": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "serve": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Leewel Mwangi",
   "license": "ISC",
@@ -13,6 +19,7 @@
     "@cogent-labs/react-rating-component": "^1.1.0",
     "@pismo/react-currency-input": "^2.0.2",
     "css-loader": "^3.2.0",
+    "express": "^4.17.1",
     "file-loader": "^4.2.0",
     "react": "^16.9.0",
     "react-addons-css-transition-group": "^15.6.2",
