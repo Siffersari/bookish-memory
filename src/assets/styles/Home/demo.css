@@ -31,9 +31,10 @@ body {
   font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
   color: #414146;
-  background: #ffffff;
+  background: #c7c5c5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 a {
@@ -75,10 +76,11 @@ a:focus {
 .title-header h1 {
   color: #3f3f3f;
   font-size: 1em;
-  line-height: 1;
+  line-height: 2;
   margin: 0;
   padding: 0 1em;
   letter-spacing: 0.5em;
+  margin-left: 1em;
 }
 
 .search-icons {
@@ -86,7 +88,11 @@ a:focus {
 }
 
 .search-icons i {
-  margin-right: 2.5em;
+  margin-right: 4.5em;
+}
+
+.fa-shopping-cart {
+  letter-spacing: 0.2em;
 }
 
 @media screen and (max-width: 40em) {

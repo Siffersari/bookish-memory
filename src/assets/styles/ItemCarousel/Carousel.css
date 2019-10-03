@@ -24,9 +24,15 @@
   margin: 2em 0;
 }
 
+.gallery-container {
+  background-color: white;
+  min-height: 19em;
+}
+
 .carousel-container {
-  margin: 7.5em 0.5em 5em 0.5em;
+  margin: 4em 0.5em 5em 0.5em;
   cursor: pointer;
+  background-color: white;
 }
 
 .carousel-container div {
@@ -37,9 +43,30 @@
   margin-left: 5em;
 }
 
+.item-container div {
+  padding: 3em 0;
+}
+
+.item-container div:hover {
+  transform: translateY(-10px);
+}
+
 .btn-small {
   width: 5em !important;
   border-radius: 0 !important;
   position: absolute;
-  top: 14em;
+  top: 10em;
+  background-color: white !important;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  color: black !important;
+  font-size: 4em;
+  opacity: 0.2;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover {
+  opacity: 1;
 }

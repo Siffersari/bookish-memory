@@ -1,7 +1,5 @@
 import React from 'react';
-import '../../assets/styles/Home/Home.css';
-import '../../assets/styles/Home/demo.css';
-import '../../assets/styles/Home/normalize.css';
+import '../../assets/styles/Home/Demo.css';
 
 function Header() {
   return (

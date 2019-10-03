@@ -2,29 +2,16 @@
   min-height: 50vh;
 }
 
-/* body {
-  background-color: #fdf1ec;
-} */
-
 .wrapper {
   min-height: 470px;
+  background-color: white;
   margin: 0 auto;
   border-radius: 7px 7px 7px 7px;
-  /* VIA CSS MATIC https://goo.gl/cIbnS */
   -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  clip-path: polygon(0 100%, 0 0, 55% 0, 100% 100%);
 }
-
-/* .product-img {
-  float: left;
-  height: 420px;
-  width: 327px;
-}
-
-.product-img img {
-  border-radius: 7px 0 0 7px;
-} */
 
 .message-clicked {
   animation: clicked-keyframes 1s;
@@ -51,7 +38,7 @@
 .product-info {
   float: left;
   height: 420px;
-  width: 90%;
+  width: 100%;
   border-radius: 0 7px 10px 7px;
   background-color: #ffffff;
   padding: 0 3em 0 5em;
@@ -59,7 +46,7 @@
 
 .product-text {
   height: 300px;
-  width: 75%;
+  width: 67%;
 }
 
 .product-text h1 {
@@ -121,7 +108,7 @@ span {
 
 .price-span {
   letter-spacing: 0.2em;
-  margin-left: 3em;
+  margin-left: 4em;
 }
 
 .p-price-btn {
@@ -129,7 +116,7 @@ span {
   display: inline-block;
   height: 50px;
   width: 176px;
-  margin: 0 40px 0 16px;
+  margin: 0 350px 0 16px;
   box-sizing: border-box;
   border: transparent;
   border-radius: 60px;
@@ -139,7 +126,7 @@ span {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #ffffff;
-  background-color: #9cebd5;
+  background-color: #228d57;
   cursor: pointer;
   outline: none;
 }

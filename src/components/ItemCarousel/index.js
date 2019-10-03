@@ -37,6 +37,7 @@ export class ItemGallery extends Component {
       <div className="carousel-container">
         <Whirligig
           visibleSlides={3}
+          className="item-container"
           gutter="10em"
           ref={_whirligigInstance => {
             whirligig = _whirligigInstance;
@@ -84,10 +85,10 @@ export class ItemGallery extends Component {
           />
         </Whirligig>
         <button onClick={prev} className="carousel-btn btn-small">
-          Prev
+          <i className="fa fa-angle-left"></i>
         </button>
         <button onClick={next} className="carousel-btn carousel-next btn-small">
-          Next
+          <i className="fa fa-angle-right"></i>
         </button>
       </div>
     );

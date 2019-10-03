@@ -43,19 +43,19 @@ export class Select extends Component {
           <ul>
             <li>
               <input id="1" type="radio" name="currency" value="USD" />
-              <label for="1">USD</label>
+              <label htmlFor="1">USD</label>
             </li>
             <li>
               <input id="2" type="radio" name="currency" value="NGN" />
-              <label for="2">NGN</label>
+              <label htmlFor="2">NGN</label>
             </li>
             <li>
               <input id="3" type="radio" name="currency" value="KES" />
-              <label for="3">KSH</label>
+              <label htmlFor="3">KSH</label>
             </li>
             <li>
               <input id="4" type="radio" name="currency" value="EUR" />
-              <label for="4">EUR</label>
+              <label htmlFor="4">EUR</label>
             </li>
           </ul>
           <button>
