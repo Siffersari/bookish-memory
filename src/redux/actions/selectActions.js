@@ -8,8 +8,5 @@ export const fetchSuccess = response => ({
 export const fetchSelectedCurrency = currency => dispatch => {
   dispatch({ type: FETCH_CURRENCY });
 
-  return (
-    (currency && dispatch(fetchSuccess(currency || 'US'))) ||
-    console.log('Failed to get currency')
-  );
+  return currency && dispatch(fetchSuccess(currency || 'US'));
 };

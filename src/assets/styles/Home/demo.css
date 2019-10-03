@@ -31,7 +31,7 @@ body {
   font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
   color: #414146;
-  background: #c7c5c5;
+  background: #186b39d9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -58,7 +58,7 @@ a:focus {
 
 .title-header {
   position: fixed;
-  background-color: #ffffff;
+  background: #f7f7f7; /* fallback for old browsers */
   min-height: 3.6em;
   z-index: 100;
   display: -webkit-flex;

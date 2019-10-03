@@ -42,7 +42,13 @@ export class Select extends Component {
         <div className="selector">
           <ul>
             <li>
-              <input id="1" type="radio" name="currency" value="USD" />
+              <input
+                id="1"
+                type="radio"
+                name="currency"
+                value="USD"
+                defaultChecked={true}
+              />
               <label htmlFor="1">USD</label>
             </li>
             <li>

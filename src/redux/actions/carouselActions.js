@@ -12,10 +12,5 @@ export const fetchClickedImage = name => dispatch => {
 
   const result = filterItem(data.products, 'name', name);
 
-  console.log('NAME HERE', result);
-
-  return (
-    (name && dispatch(fetchSuccess(result[0] || []))) ||
-    console.log('Something went wrong')
-  );
+  return name && dispatch(fetchSuccess(result[0] || []));
 };

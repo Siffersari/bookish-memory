@@ -73,7 +73,6 @@ export class Description extends Component {
       'currency',
       currency
     );
-    console.log(selectedCurrency);
 
     return (
       <div className="wrapper">
